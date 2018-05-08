@@ -5,12 +5,6 @@ using UnityEngine;
 public class SimpleSphereData : BaseSimplePrimitiveData
 {
     public float radius;
-    public bool isFixRandomX;
-    public float fixRandomX;
-    public bool isFixRandomY;
-    public float fixRandomY;
-    public bool isFixRandomZ;
-    public float fixRandomZ;
 
     protected virtual void OnDrawGizmosSelected()
     {
