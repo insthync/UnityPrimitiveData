@@ -7,6 +7,16 @@ public class SimpleLineData : BaseSimplePrimitiveData
     public Vector3 fromPoint;
     public Vector3 toPoint;
 
+    public Vector3 GetFromPosition()
+    {
+        return transform.position + fromPoint;
+    }
+
+    public Vector3 GetToPosition()
+    {
+        return transform.position + toPoint;
+    }
+
     protected virtual void OnDrawGizmosSelected()
     {
         Gizmos.color = gizmosColor;
@@ -19,6 +29,6 @@ public class SimpleLineData : BaseSimplePrimitiveData
         result.x = !isFixRandomX ? result.x : fixRandomX;
         result.y = !isFixRandomY ? result.y : fixRandomY;
         result.z = !isFixRandomZ ? result.z : fixRandomZ;
-        return result;
+        return transform.position + result;
     }
 }
